@@ -76,7 +76,10 @@ set ttymouse=xterm2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor - when moving vertically using j/k
+map <leader>[ :set colorcolumn=100<cr>
+map <leader>] :set colorcolumn=120<cr>
+
+" Set 3 lines to the cursor - when moving vertically using j/k
 set so=3
 
 " Turn on the WiLd menu
