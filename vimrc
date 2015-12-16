@@ -63,11 +63,8 @@ set autoread
 let mapleader = ","
 let g:mapleader = ","
 
-" Fast saving
-nmap <leader>w :w!<cr>
-
-au FileType go set noexpandtab
-
+" Map ; to : so shift doesn't have to be pressed to do things
+map ; :
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mouse support
@@ -80,7 +77,7 @@ set ttymouse=xterm2
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+set so=3
 
 " Turn on the WiLd menu
 set wildmenu
@@ -118,6 +115,9 @@ set lazyredraw
 
 " For regular expressions turn magic on
 set magic
+
+" Line numbers
+set number
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -158,11 +158,7 @@ set ffs=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
-set nowb
-set noswapfile
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -257,7 +253,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ \ Col:\ %c
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
