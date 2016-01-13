@@ -93,3 +93,7 @@ export USE_CCACHE=1
 alias gmn='git merge --no-ff'
 alias gmf='git merge --ff-only'
 alias gu='git up'
+
+cs() {
+    cd $@ && ls;
+}
