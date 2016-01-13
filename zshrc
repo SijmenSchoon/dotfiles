@@ -88,3 +88,8 @@ if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
 export USE_CCACHE=1
+
+# Some more git shortcuts
+alias gmn='git merge --no-ff'
+alias gmf='git merge --ff-only'
+alias gu='git up'
