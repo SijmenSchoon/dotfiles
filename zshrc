@@ -83,7 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export HOMEBREW_GITHUB_API_TOKEN=338bcb7982492d05f9bce2d89b593e2b90c4de74
-export PATH="$HOME/Library/Haskell/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+export RUBY_VERSION="$(ruby -v | sed 's/ruby \([0-9.]*\)p.*/\1/')"
+export PATH="$HOME/Library/Haskell/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$HOME/.gem/ruby/$RUBY_VERSION/bin:$PATH"
 if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
