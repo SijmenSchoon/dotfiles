@@ -88,3 +88,8 @@ if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
 export USE_CCACHE=1
+
+# Create cs function to cd and ls
+function cs() {
+    cd "$@" && ls
+}
