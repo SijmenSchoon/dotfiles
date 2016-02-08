@@ -62,6 +62,9 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
+let g:color_coded_enabled = 1
 
 " Map ; to : so shift doesn't have to be pressed to do things
 map ; :

@@ -98,3 +98,4 @@ alias gu='git up'
 cs() {
     cd $@ && ls;
 }
+
