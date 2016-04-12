@@ -42,6 +42,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pathogen_disabled = [ "auto-pairs", "command-t" ]
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -68,6 +69,10 @@ let g:color_coded_enabled = 1
 
 " Map ; to : so shift doesn't have to be pressed to do things
 map ; :
+
+autocmd vimenter * NERDTree
+let g:ycm_key_list_select_completion = [ "<Tab>" ]
+let g:ycm_key_list_previous_completion = [ "<S-Tab>" ]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mouse support

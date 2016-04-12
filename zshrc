@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export HOMEBREW_GITHUB_API_TOKEN=338bcb7982492d05f9bce2d89b593e2b90c4de74
 export RUBY_VERSION="$(ruby -v | sed 's/ruby \([0-9.]*\)p.*/\1/')"
-export PATH="$HOME/Library/Haskell/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$HOME/.gem/ruby/$RUBY_VERSION/bin:$PATH"
+export PATH="/usr/local/texlive/2015/bin/x86_64-darwin/:$HOME/Library/Haskell/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$HOME/.gem/ruby/$RUBY_VERSION/bin:$PATH"
 if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
@@ -99,3 +99,5 @@ cs() {
     cd $@ && ls;
 }
 
+export LANG=en_US.UTF-8
+export LC_ALL=$LANG
