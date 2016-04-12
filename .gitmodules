@@ -12,7 +12,7 @@
 	url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule "vim/bundle/YCM-Generator"]
 	path = vim/bundle/YCM-Generator
-	url = git@github.com:rdnetto/YCM-Generator.git
+	url = git@github.com:SijmenSchoon/YCM-Generator.git
 [submodule "vim/bundle/color_coded"]
 	path = vim/bundle/color_coded
 	url = git@github.com:jeaye/color_coded.git
