@@ -42,9 +42,35 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pathogen_disabled = [ "auto-pairs", "command-t" ]
-call pathogen#infect()
-call pathogen#helptags()
+"let g:pathogen_disabled = [ "auto-pairs", "command-t" ]
+"call pathogen#infect()
+"call pathogen#helptags()
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ervandew/supertab'
+Plugin 'fatih/vim-go'
+Plugin 'SijmenSchoon/YCM-Generator'
+Plugin 'jeaye/color_coded'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'alvan/vim-closetag'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/syntastic'
+Plugin 'hsanson/vim-android'
+Plugin 'rust-lang/rust.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -62,13 +88,22 @@ set autoread
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
-let g:airline_powerline_fonts = 1
 let g:mapleader = ","
+
+" Airline configuration
+let g:airline_powerline_fonts = 1
+
+" Color Coded configuration
 let g:color_coded_enabled = 1
+
+" YCM configuration
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_list_select_completion = [ "<Tab>" ]
 let g:ycm_key_list_previous_completion = [ "<S-Tab>" ]
+
+" vim-android configuration
+let g:android_sdk_path = '/Users/sijmen/Library/Android/sdk'
 
 " Map ; to : so shift doesn't have to be pressed to do things
 map ; :
@@ -257,6 +292,7 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
+map <C-\> :NERDTreeToggle<cr>
 
 """"""""""""""""""""""""""""""
 " => Status line
